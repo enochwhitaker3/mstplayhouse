@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6e6f56ca-cb1c-4333-a7cd-ca7454420941")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("msp-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2214fa524751c77b08c2a9952c110889ddd0c08d")]
 [assembly: System.Reflection.AssemblyProductAttribute("msp-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("msp-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
