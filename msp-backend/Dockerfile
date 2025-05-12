@@ -1,15 +1,17 @@
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
-
 COPY . ./
-RUN dotnet restore
+RUN dotnet restore "msp-backend/msp-backend.csproj"
+RUN dotnet publish "msp-backend/msp-backend.csproj" -c Release -o /app/out
 
-RUN dotnet publish -c Release -o out
-
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 COPY --from=build /app/out .
 
-EXPOSE 80
+# Important for Render: use the port it detects (8080)
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "msp-backend.dll"]
