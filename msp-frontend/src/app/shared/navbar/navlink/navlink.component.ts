@@ -1,0 +1,23 @@
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { DiamondComponent } from '../../diamond/diamond.component';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-navlink',
+  imports: [DiamondComponent, CommonModule, RouterModule],
+  templateUrl: './navlink.component.html',
+  styleUrl: './navlink.component.scss',
+})
+export class NavlinkComponent {
+  @Input() title: string = '';
+  @Input() path: string = '';
+  isHovered = false;
+
+  constructor(public router: Router) {}
+
+  get isActive(): boolean {
+    return this.router.url === this.path;
+  }
+}

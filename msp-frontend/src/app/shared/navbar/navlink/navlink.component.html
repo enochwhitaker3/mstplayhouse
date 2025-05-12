@@ -1,0 +1,22 @@
+<a
+  class="nav-link"
+  [routerLink]="path"
+  (mouseenter)="isHovered = true"
+  (mouseleave)="isHovered = false"
+>
+  <div class="diamond-wrapper left">
+    <app-diamond
+      [isHovered]="isHovered"
+      [isClicked]="isActive"
+      position="left"
+    ></app-diamond>
+  </div>
+  <span [ngClass]="{ 'selected-link': isActive }">{{ title }}</span>
+  <div class="diamond-wrapper right">
+    <app-diamond
+      [isHovered]="isHovered"
+      [isClicked]="isActive"
+      position="right"
+    ></app-diamond>
+  </div>
+</a>

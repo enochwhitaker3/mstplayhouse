@@ -1,0 +1,15 @@
+svg {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.diamond-hover-left {
+  opacity: 1;
+  transform: translateX(-0.5rem);
+}
+
+.diamond-hover-right {
+  opacity: 1;
+  transform: translateX(0.5rem);
+}

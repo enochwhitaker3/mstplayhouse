@@ -1,0 +1,22 @@
+@use "./colors.scss" as *;
+
+@font-face {
+  font-family: "NewSpirit";
+  src: url("/assets/new-spirit-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewSpiritBold";
+  src: url("/assets/new-spirit-bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewSpiritCondensed";
+  src: url("/assets/new-spirit-condensed.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background-color: $brand-white;
+  font-family: "NewSpirit", sans-serif;
+}
