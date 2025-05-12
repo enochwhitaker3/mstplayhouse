@@ -1,10 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using msp_backend.Data;
+using msp_backend.Services.Plays;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContextFactory<MainStreetDbContext>(config => config.UseNpgsql(builder.Configuration.GetConnectionString("mspdb"), builder =>
+{
+	builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+}));
+
+builder.Services.AddSingleton<IPlayService, PlayService>();
 
 builder.Services.AddCors(options =>
 {
@@ -16,12 +25,8 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddDbContextFactory<MainStreetDbContext>(options =>
-    options.UseNpgsql(
-        builder.Configuration.GetConnectionString("mspdb"),
-        npgsql => npgsql.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)
-    )
-);
+
+
 
 builder.Services.AddControllers(); 
 

@@ -6,7 +6,7 @@ namespace msp_backend.Services.Plays
     {
         Task<PlayDTO> CreatePlayAsync(PlayDTO play);
         Task<PlayDTO> GetPlayByIdAsync(int id);
-        Task<IEnumerable<PlayDTO>> GetAllPlaysAsync();
+        Task<List<PlayDTO>> GetAllPlaysAsync();
         Task<PlayDTO> UpdatePlayAsync(PlayDTO play);
         Task<bool> DeletePlayAsync(int id);
     }
