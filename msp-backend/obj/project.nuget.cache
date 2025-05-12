@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hQ20bKa8hmg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\enoch\\personal_projects\\msp-angular\\msp-backend\\msp-backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\enoch\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\enoch\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
