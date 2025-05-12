@@ -11,7 +11,7 @@ env:
   AZURE_APIM_SERVICENAME: msp-backendapi
   AZURE_APIM_API_ID: msp-backend
   AZURE_APIM_APPSERVICEURL: https://msp-backend20250512145508.azurewebsites.net
-  SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 5.6.3
+  SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 8.1.1
   SWASHBUCKLE_DOTNET_CORE_VERSION: 3.1.x
   API_IMPORT_SPECIFICATION_PATH: msp-backend\publish\swagger.json
   API_IMPORT_DLL: msp-backend\bin\Release\net9.0\msp-backend.dll
