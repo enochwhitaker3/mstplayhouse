@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Play } from '../../interfaces/play';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PlaysService {
+  url = `${environment.apiUrl}plays`;
 
-  constructor() { }
+  async getAllPlays(): Promise<Play[]> {
+    const response = await fetch(this.url);
+    return ((await response.json()) as Play[]) ?? [];
+  }
 }
