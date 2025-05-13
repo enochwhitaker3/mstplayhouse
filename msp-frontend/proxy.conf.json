@@ -1,0 +1,8 @@
+{
+  "/data-api": {
+    "target": "https://mainstreetplayhouse.org",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

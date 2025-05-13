@@ -10,6 +10,7 @@ export class PlaysService {
 
   async getAllPlays(): Promise<Play[]> {
     const response = await fetch(this.url);
-    return ((await response.json()) as Play[]) ?? [];
+    const data = await response.json();
+    return data.value ?? [];
   }
 }

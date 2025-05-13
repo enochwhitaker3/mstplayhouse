@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://mainstreetplayhouse.org/data-api/rest/',
+  apiUrl: 'http://localhost:4200/data-api/rest/',
 };

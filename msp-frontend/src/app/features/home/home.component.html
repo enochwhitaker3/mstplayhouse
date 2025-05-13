@@ -13,5 +13,7 @@
     <p>The Heart of Local Theatre Since 2014</p>
   </div>
   <img src="assets/ripped.svg" alt="Ripped Paper" class="hero-paper" />
-  <p *ngFor="let play of plays">{{ play.title }}</p>
+  <div class="shows">
+    <p *ngFor="let play of plays">{{ play.title }}</p>
+  </div>
 </div>
