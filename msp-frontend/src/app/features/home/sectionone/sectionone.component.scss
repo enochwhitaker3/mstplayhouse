@@ -1,0 +1,44 @@
+@use "../../../../colors.scss" as *;
+
+.smallimg {
+  width: fit-content;
+  height: 100%;
+  margin-right: 5em;
+  margin-left: 5em;
+}
+.ripped {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -5em;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: -5em;
+  padding-bottom: 5em;
+  height: 50vh;
+
+  .section-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 85vw;
+    height: 100%;
+  }
+
+  .section-text {
+    color: $brand-black;
+    font-family: "NewSpiritCondensed";
+    text-align: start;
+    z-index: 1;
+    margin-right: 5em;
+  }
+  .section-header {
+    font-size: 3rem;
+  }
+}

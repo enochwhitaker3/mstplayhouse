@@ -5,15 +5,14 @@
     class="hero-image"
   />
   <div class="hero-text">
-    <h1>
+    <h1 class="fadeIn">
       Heartfelt performances, homegrown talent, and
       <em>timeless</em> stories—bringing the Bear River Valley together through
       the magic of live theatre.
     </h1>
-    <p>The Heart of Local Theatre Since 2014</p>
+    <p class="fadeIn">The Heart of Local Theatre Since 2014</p>
   </div>
-  <img src="assets/ripped.svg" alt="Ripped Paper" class="hero-paper" />
-  <div class="shows">
-    <p *ngFor="let play of plays">{{ play.title }}</p>
-  </div>
+  <app-sectionone></app-sectionone>
+  <app-sectiontwo></app-sectiontwo>
+  <app-sectionthree></app-sectionthree>
 </div>

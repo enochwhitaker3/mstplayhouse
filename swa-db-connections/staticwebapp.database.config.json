@@ -23,7 +23,7 @@
         "origins": [
           "http://localhost:4200",
           "http://localhost:4280",
-          "https://mainstreetplayhouse.org"
+          "https://mainstreetplayhouse.org/"
         ],
         "allow-credentials": false
       },
