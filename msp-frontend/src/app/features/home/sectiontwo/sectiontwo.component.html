@@ -6,29 +6,36 @@
       </h1>
     </div>
     <div class="posters-container">
-      <div class="poster-wrapper" *ngFor="let play of plays">
-        <img src="{{ play.poster }}" alt="Poster for play" class="poster" />
-        <img
-          src="assets/Tape.svg"
-          alt="Tape"
-          [ngClass]="play.id % 2 === 0 ? 'tape-top-left' : 'tape-top-right'"
-        />
-        <img
-          src="assets/Tape.svg"
-          alt="Tape"
-          [ngClass]="
-            play.id % 2 === 0 ? 'tape-bottom-right' : 'tape-bottom-left'
-          "
-        />
-        <div class="button-wrapper">
-          <app-button
-            text="Get tickets"
-            route="/"
-            color="#191a18"
-            backgroundColor="#ece6d8"
-          ></app-button>
+      <ng-container *ngIf="loading">
+        <div class="loader-placeholder">
+          <app-loader></app-loader>
         </div>
-      </div>
+      </ng-container>
+      <ng-container *ngIf="!loading">
+        <div class="poster-wrapper" *ngFor="let play of plays">
+          <img src="{{ play.poster }}" alt="Poster for play" class="poster" />
+          <img
+            src="assets/Tape.svg"
+            alt="Tape"
+            [ngClass]="play.id % 2 === 0 ? 'tape-top-left' : 'tape-top-right'"
+          />
+          <img
+            src="assets/Tape.svg"
+            alt="Tape"
+            [ngClass]="
+              play.id % 2 === 0 ? 'tape-bottom-right' : 'tape-bottom-left'
+            "
+          />
+          <div class="button-wrapper">
+            <app-button
+              text="Get tickets"
+              route="/"
+              color="#191a18"
+              backgroundColor="#ece6d8"
+            ></app-button>
+          </div>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

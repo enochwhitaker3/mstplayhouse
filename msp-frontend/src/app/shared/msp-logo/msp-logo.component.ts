@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-msp-logo',
-  imports: [],
+  imports: [CommonModule, RouterModule],
   template: `
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +13,7 @@ import { Component } from '@angular/core';
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
       viewBox="51.55 51.55 271.53 271.53"
+      [routerLink]="['/']"
     >
       <defs>
         <g></g>
@@ -298,4 +301,6 @@ import { Component } from '@angular/core';
   `,
   styles: ``,
 })
-export class MspLogoComponent {}
+export class MspLogoComponent {
+  constructor(public router: Router) {}
+}

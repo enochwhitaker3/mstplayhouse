@@ -1,17 +1,64 @@
 <nav class="nav">
   <div class="menu spectral-semibold">
-    <div class="nav-left">
+    <div class="nav-left avg:flex hidden">
       <app-navlink title="Currently Showing" path="currently-showing" />
       <app-navlink title="Get Tickets" path="get-tickets" />
     </div>
 
-    <div class="nav-center">
+    <div class="nav-center avg:flex">
       <app-msp-logo class="logo" />
     </div>
 
-    <div class="nav-right">
+    <div class="nav-right avg:flex hidden">
       <app-navlink title="Auditions" path="auditions" />
       <app-navlink title="About Us" path="about-us" />
     </div>
+
+    <button
+      class=" w-8 h-8 flex flex-col justify-center items-center avg:hidden group z-50 bg-transparent border-none cursor-pointer absolute left-1/12 transform -translate-x-1/2"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle menu"
+    >
+      <span
+        class="block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out"
+        [ngClass]="{
+          'rotate-45 translate-y-1.5': isMobileMenuOpen,
+          'translate-y-0': !isMobileMenuOpen
+        }"
+      ></span>
+
+      <span
+        class="block w-6 h-0.5 bg-white my-1 transition-opacity duration-300 ease-in-out"
+        [ngClass]="{
+          'opacity-0': isMobileMenuOpen,
+          'opacity-100': !isMobileMenuOpen
+        }"
+      ></span>
+
+      <span
+        class="block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out"
+        [ngClass]="{
+          '-rotate-45 -translate-y-1.5': isMobileMenuOpen,
+          'translate-y-0': !isMobileMenuOpen
+        }"
+      ></span>
+    </button>
   </div>
 </nav>
+
+<div
+  [ngClass]="{
+    'menu-open': true,
+    'menu-open--active': isMobileMenuOpen
+  }"
+  class="avg:hidden"
+>
+  <div class="link-container-mobile">
+    <app-navlink title="Currently Showing" path="currently-showing" />
+    <app-navlink title="Get Tickets" path="get-tickets" />
+    <app-navlink title="Auditions" path="auditions" />
+    <app-navlink title="About Us" path="about-us" />
+  </div>
+</div>
+
+

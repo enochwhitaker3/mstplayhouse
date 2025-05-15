@@ -29,7 +29,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss", "src/tailwind-theme.css"],
             "scripts": []
           },
           "configurations": {
@@ -92,7 +92,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss", "src/tailwind-theme.css"],
             "scripts": []
           }
         }
