@@ -16,16 +16,17 @@ export class SectiontwoComponent {
   plays: Play[] = [];
   loading = true;
 
-  async ngOnInit() {
-    try {
-      await this.playService.getAllPlays().subscribe((plays) => {
+  ngOnInit() {
+    this.playService.getAllPlays().subscribe({
+      next: (plays) => {
         this.plays = plays;
-      });
-    } catch (err) {
-      console.error('Error fetching plays:', err);
-    } finally {
-      this.loading = false;
-    }
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Error fetching plays:', err);
+        this.loading = false;
+      },
+    });
   }
 
   // constructor() {
