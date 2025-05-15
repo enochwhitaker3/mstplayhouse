@@ -4,5 +4,6 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
-  --breakpoint-avg: 874px;
+  --breakpoint-xs: 500px;
+  --breakpoint-avg: 884px;
 }

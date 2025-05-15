@@ -3,7 +3,7 @@ import { ButtonComponent } from '../../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';
 import { PlaysService } from '../../../services/plays/plays.service';
-import { LoaderComponent } from "../../../shared/loader/loader.component";
+import { LoaderComponent } from '../../../shared/loader/loader.component';
 
 @Component({
   selector: 'app-sectiontwo',
@@ -18,7 +18,9 @@ export class SectiontwoComponent {
 
   async ngOnInit() {
     try {
-      this.plays = await this.playService.getAllPlays();
+      await this.playService.getAllPlays().subscribe((plays) => {
+        this.plays = plays;
+      });
     } catch (err) {
       console.error('Error fetching plays:', err);
     } finally {

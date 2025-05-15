@@ -1,16 +1,18 @@
 <img src="assets/ripped.svg" alt="Ripped Paper" class="ripped" />
-<div class="section">
-  <div class="section-content">
+<div class="section md:mt-[-5rem] sm:mt-[-2.5rem]">
+  <div class="section-content avg:flex hidden">
     <img
       src="https://mainstreetimages.blob.core.windows.net/image/historic_tremonton.svg"
       alt="Mural"
-      class="smallimg"
+      class="w-fit xl:h-full lg:h-3/4 md:h-2/3 mr-20"
     />
     <div class="section-text">
-      <h1 class="fadeIn section-header underline">
+      <h1
+        class="fadeIn 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl underline"
+      >
         <em>Come Visit Tremonton, Utah!</em>
       </h1>
-      <h2 class="fadeIn">
+      <h2 class="fadeIn 2xl:text-2xl xl:text-xl lg:text-lg md:text-base">
         Discover small town charm and big-time entertainment at the Main Street
         Playhouse Theatre, right in the heart of Tremonton. Nestled on historic
         Main Street, our cozy community theatre brings stories to life with
@@ -19,6 +21,26 @@
         won't regret making time for a night at the Playhouse
       </h2>
       <app-button text="Get tickets" route="/"></app-button>
+    </div>
+  </div>
+  <div class="section-content avg:hidden flex">
+    <div class="section-text flex items-center flex-col">
+      <h1 class="fadeIn sm:text-3xl text-2xl underline mb-1">
+        <em>Come Visit Tremonton, Utah!</em>
+      </h1>
+      <h2 class="fadeIn sm:text-lg text-base text-center mt-1">
+        Discover small town charm and big-time entertainment at the Main Street
+        Playhouse Theatre, right in the heart of Tremonton. Nestled on historic
+        Main Street, our cozy community theatre brings stories to life with
+        local talent, heartfelt performances, and a welcoming atmosphere.
+        Whether you're visiting for the weekend or just passing through, you
+        won't regret making time for a night at the Playhouse
+      </h2>
+      <img
+        src="https://mainstreetimages.blob.core.windows.net/image/historic_tremonton.svg"
+        alt="Mural"
+        class="sm:w-3/5 w-4/5 h-full"
+      />
     </div>
   </div>
 </div>
