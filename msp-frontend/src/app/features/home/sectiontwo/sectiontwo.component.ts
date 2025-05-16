@@ -28,10 +28,4 @@ export class SectiontwoComponent {
       },
     });
   }
-
-  // constructor() {
-  //   this.playService.getAllPlays().then((plays: Play[]) => {
-  //     this.plays = plays;
-  //   });
-  // }
 }

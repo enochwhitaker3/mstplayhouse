@@ -1,7 +1,9 @@
-<div class="section">
+<div class="section avg:h-[70vh] avg:pt-0 pt-20">
   <div class="section-content">
     <div class="section-text">
-      <h1 class="fadeIn section-header">
+      <h1
+        class="fadeIn 2xl:text-5xl xl:text-4xl sm:text-3xl text-2xl underline"
+      >
         <em>Upcoming Preformances</em>
       </h1>
     </div>
@@ -12,27 +14,38 @@
         </div>
       </ng-container>
       <ng-container *ngIf="!loading">
-        <div class="poster-wrapper" *ngFor="let play of plays">
-          <img src="{{ play.poster }}" alt="Poster for play" class="poster" />
-          <img
-            src="assets/Tape.svg"
-            alt="Tape"
-            [ngClass]="play.id % 2 === 0 ? 'tape-top-left' : 'tape-top-right'"
-          />
-          <img
-            src="assets/Tape.svg"
-            alt="Tape"
-            [ngClass]="
-              play.id % 2 === 0 ? 'tape-bottom-right' : 'tape-bottom-left'
-            "
-          />
-          <div class="button-wrapper">
-            <app-button
-              text="Get tickets"
-              route="/"
-              color="#191a18"
-              backgroundColor="#ece6d8"
-            ></app-button>
+        <div class="grid grid-cols-2 avg:grid-cols-3 gap-x-24 avg:gap-y-0 gap-y-10 mx-auto">
+          <div
+            class="relative w-full 2xl:max-w-[250px] lg:max-w-[225px] max-w-[200px] aspect-[2/3]"
+            *ngFor="let play of plays"
+          >
+            <img src="{{ play.poster }}" alt="Poster for play" class="poster" />
+            <img
+              src="assets/Tape.svg"
+              alt="Tape"
+              [ngClass]="
+                play.id % 2 === 0
+                  ? 'tape-top-left avg:w-20 xs:w-16 w-12 -translate-x-[30%] -translate-y-[30%]'
+                  : 'tape-top-right avg:w-20 xs:w-16 w-12 translate-x-[30%] -translate-y-[30%] scale-x-[-1]'
+              "
+            />
+            <img
+              src="assets/Tape.svg"
+              alt="Tape"
+              [ngClass]="
+                play.id % 2 === 0
+                  ? 'tape-bottom-right avg:w-20 xs:w-16 w-12 translate-x-[30%] xs:translate-y-[-60%] translate-y-[-90%]'
+                  : 'tape-bottom-left avg:w-20 xs:w-16 w-12 -translate-x-[30%] xs:translate-y-[-60%] translate-y-[-90%] scale-x-[-1]'
+              "
+            />
+            <div class="button-wrapper">
+              <app-button
+                text="Get tickets"
+                route="/"
+                color="#191a18"
+                backgroundColor="#ece6d8"
+              ></app-button>
+            </div>
           </div>
         </div>
       </ng-container>
