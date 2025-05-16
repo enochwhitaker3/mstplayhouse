@@ -23,9 +23,11 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &.active::after {
     background-color: $brand-yellow;
   }
+
 
   .diamond-wrapper {
     position: absolute;

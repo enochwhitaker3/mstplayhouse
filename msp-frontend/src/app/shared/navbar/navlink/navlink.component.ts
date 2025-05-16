@@ -18,6 +18,6 @@ export class NavlinkComponent {
   constructor(public router: Router) {}
 
   get isActive(): boolean {
-    return this.router.url === this.path;
+    return this.router.url.includes(this.path);
   }
 }
