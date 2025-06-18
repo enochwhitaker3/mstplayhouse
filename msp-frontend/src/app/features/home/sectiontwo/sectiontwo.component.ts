@@ -20,23 +20,17 @@ export class SectiontwoComponent {
   url = `${environment.apiUrl}plays`;
 
   ngOnInit() {
-      fetch('https://mainstreetplayhouse.org/data-api/rest/plays', { credentials: 'include' })
-        .then(response => response.json())
-        .catch(err => {
-          console.error('Error fetching plays:', err);
-          this.loading = false;
-          this.error = `AAAHHHHH!!! ${err.message} + ${this.url}`;
-        });
-    this.playService.getAllPlays().subscribe({
-      next: (plays) => {
-        this.plays = plays;
+    fetch(`${this.url}`, { credentials: 'include' })
+      .then(response => response.json())
+      .then( data => {
+        console.log('Fetched plays:', data);
+        this.plays = data.value;
         this.loading = false;
-      },
-      error: (err) => {
+      })
+      .catch(err => {
         console.error('Error fetching plays:', err);
         this.loading = false;
-        // this.error = `Failed to load plays. Please try again later. ${err.message} + ${this.url}`;
-      },
-    });
+        this.error = `AAAHHHHH!!! ${err.message} + ${this.url}`;
+      });
   }
 }
