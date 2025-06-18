@@ -25,7 +25,8 @@
           "http://localhost:4200",
           "https://mainstreetplayhouse.org/"
         ],
-        "allow-credentials": true
+        "allow-credentials": true,
+        "headers": ["Content-Type", "Authorization", "Accept", "Origin"]
       },
       "authentication": {
         "provider": "StaticWebApps"

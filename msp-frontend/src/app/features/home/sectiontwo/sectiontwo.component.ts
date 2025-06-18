@@ -19,18 +19,23 @@ export class SectiontwoComponent {
   error: string | null = null;
   url = `${environment.apiUrl}plays`;
 
-  ngOnInit() {
-    fetch(`${this.url}`, { credentials: 'include' })
-      .then(response => response.json())
-      .then( data => {
-        console.log('Fetched plays:', data);
-        this.plays = data.value;
-        this.loading = false;
-      })
-      .catch(err => {
-        console.error('Error fetching plays:', err);
-        this.loading = false;
-        this.error = `AAAHHHHH!!! ${err} + ${err.message} + ${this.url}`;
-      });
+  async ngOnInit() {
+
+    const response = await fetch(`${this.url}`, { method: 'GET', headers: { "Content-Type": "application/json" } });
+    const result = await response.json();
+    this.plays = result.value;
+    this.loading = false;
+    // fetch(`${this.url}`, { credentials: 'include' })
+    //   .then(response => response.json())
+    //   .then( data => {
+    //     console.log('Fetched plays:', data);
+    //     this.plays = data.value;
+    //     this.loading = false;
+    //   })
+    //   .catch(err => {
+    //     console.error('Error fetching plays:', err);
+    //     this.loading = false;
+    //     this.error = `AAAHHHHH!!! ${err} + ${err.message} + ${this.url}`;
+    //   });
   }
 }
