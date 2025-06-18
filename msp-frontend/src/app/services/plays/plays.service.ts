@@ -13,7 +13,7 @@ export class PlaysService {
   constructor(private http: HttpClient) {}
   getAllPlays(): Observable<Play[]> {
     return this.http
-      .get<{ value: Play[] }>(this.url, { headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } })
+      .get<{ value: Play[] }>(this.url)
       .pipe(map((response) => response.value ?? []));
   }
 }
