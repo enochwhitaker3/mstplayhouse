@@ -12,8 +12,6 @@ export class PlaysService {
 
   constructor(private http: HttpClient) {}
   getAllPlays(): Observable<Play[]> {
-    return this.http
-      .get<{ value: Play[] }>(this.url)
-      .pipe(map((response) => response.value ?? []));
+    return this.http.get<Play[]>('https://mainstreetplayhouse.org/data-api/rest/plays', { withCredentials: true });
   }
 }
