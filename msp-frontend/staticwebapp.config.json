@@ -1,8 +1,8 @@
 {
   "routes": [
     {
-      "route": "/api/GetPlays",
-      "rewrite": "https://msp-functions.azurewebsites.net/api/GetPlays"
+      "route": "/api/{*path}",
+      "rewrite": "https://msp-functions.azurewebsites.net/api/{path}"
     }
   ]
 }
