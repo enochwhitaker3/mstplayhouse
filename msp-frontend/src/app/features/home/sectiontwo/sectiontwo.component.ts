@@ -20,8 +20,19 @@ export class SectiontwoComponent {
   url = `${environment.apiUrl}plays`;
 
   async ngOnInit() {
-
-    const response = await fetch(`${this.url}`, { method: 'GET', headers: { "Content-Type": "application/json" }, mode: 'cors' });
+    const response = await fetch(`${this.url}`, { 
+      method: 'GET', 
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://mainstreetplayhouse.org",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Credentials": "true"
+      }, 
+      mode: 'cors', 
+      credentials: 'include' 
+    });
     const result = await response.json();
     this.plays = result.value;
     this.loading = false;
