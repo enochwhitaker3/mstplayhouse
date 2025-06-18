@@ -21,21 +21,9 @@ export class SectiontwoComponent {
 
   async ngOnInit() {
 
-    const response = await fetch(`${this.url}`, { method: 'GET', headers: { "Content-Type": "application/json" } });
+    const response = await fetch(`${this.url}`, { method: 'GET', headers: { "Content-Type": "application/json" }, mode: 'cors' });
     const result = await response.json();
     this.plays = result.value;
     this.loading = false;
-    // fetch(`${this.url}`, { credentials: 'include' })
-    //   .then(response => response.json())
-    //   .then( data => {
-    //     console.log('Fetched plays:', data);
-    //     this.plays = data.value;
-    //     this.loading = false;
-    //   })
-    //   .catch(err => {
-    //     console.error('Error fetching plays:', err);
-    //     this.loading = false;
-    //     this.error = `AAAHHHHH!!! ${err} + ${err.message} + ${this.url}`;
-    //   });
   }
 }
