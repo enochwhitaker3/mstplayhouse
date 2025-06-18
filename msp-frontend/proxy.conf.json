@@ -2,7 +2,6 @@
   "/api": {
     "target": "https://msp-functions.azurewebsites.net",
     "secure": false,
-    "changeOrigin": true,
-    "logLevel": "debug"
+    "changeOrigin": true
   }
 }

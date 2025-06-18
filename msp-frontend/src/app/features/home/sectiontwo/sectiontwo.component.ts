@@ -15,21 +15,21 @@ export class SectiontwoComponent {
   error: string | null = null;
 
   ngOnInit() {
-    fetch('https://msp-functions.azurewebsites.net/api/GetPlays')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then(data => {
-            this.plays = data.value;
-            this.loading = false;
-          })
-          .catch(error => {
-            console.error('Error fetching data:', error);
-            this.loading = false;
-            this.error = `AAAHHHHH!!! ${error} + ${error.message}`;
-          });
+    fetch('/api/GetPlays')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      this.plays = data.value;
+      this.loading = false;
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      this.loading = false;
+      this.error = `AAAHHHHH!!! ${error} + ${error.message}`;
+    });
   }
-}
+} 

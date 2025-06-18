@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/api/{path}",
-      "rewrite": "https://msp-functions.azurewebsites.net/api/{path}"
-    }
-  ]
-}
