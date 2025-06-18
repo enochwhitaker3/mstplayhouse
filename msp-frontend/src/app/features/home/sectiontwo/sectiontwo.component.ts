@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';
 import { PlaysService } from '../../../services/plays/plays.service';
 import { LoaderComponent } from '../../../shared/loader/loader.component';
-import { environment } from '../../../../environments/environment';
-
 @Component({
   selector: 'app-sectiontwo',
   imports: [CommonModule, ButtonComponent, LoaderComponent],
@@ -17,24 +15,23 @@ export class SectiontwoComponent {
   plays: Play[] = [];
   loading = true;
   error: string | null = null;
-  url = `${environment.apiUrl}plays`;
 
-  async ngOnInit() {
-    const response = await fetch(`${this.url}`, { 
-      method: 'GET', 
-      headers: { 
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Origin": "https://mainstreetplayhouse.org",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, OPTIONS",
-        "Access-Control-Allow-Credentials": "true"
-      }, 
-      mode: 'cors', 
-      credentials: 'include' 
-    });
-    const result = await response.json();
-    this.plays = result.value;
-    this.loading = false;
+  ngOnInit() {
+    fetch('/api/GetPlays')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            this.plays = data.value;
+            this.loading = false;
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            this.loading = false;
+            this.error = `AAAHHHHH!!! ${error} + ${error.message}`;
+          });
   }
 }

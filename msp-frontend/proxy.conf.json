@@ -1,7 +1,7 @@
 {
-  "/data-api": {
-    "target": "https://mainstreetplayhouse.org",
-    "secure": true,
+  "/api": {
+    "target": "https://msp-functions.azurewebsites.net",
+    "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
   }
