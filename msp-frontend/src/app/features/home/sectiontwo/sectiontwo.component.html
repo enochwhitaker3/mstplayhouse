@@ -4,7 +4,7 @@
       <h1
         class="fadeIn 2xl:text-5xl xl:text-4xl sm:text-3xl text-2xl underline"
       >
-        <em>Upcoming Preformances</em>
+        <em>Upcoming Preformances!</em>
       </h1>
     </div>
     <div class="posters-container">
@@ -48,6 +48,11 @@
             </div>
           </div>
         </div>
+        <ng-container *ngIf="error">
+          <div class="error-message">
+            {{ error }}
+          </div>
+        </ng-container>
       </ng-container>
     </div>
   </div>

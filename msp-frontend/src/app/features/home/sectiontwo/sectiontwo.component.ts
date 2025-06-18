@@ -15,6 +15,7 @@ export class SectiontwoComponent {
   playService: PlaysService = inject(PlaysService);
   plays: Play[] = [];
   loading = true;
+  error: string | null = null;
 
   ngOnInit() {
     this.playService.getAllPlays().subscribe({
@@ -25,6 +26,7 @@ export class SectiontwoComponent {
       error: (err) => {
         console.error('Error fetching plays:', err);
         this.loading = false;
+        this.error = 'Failed to load plays. Please try again later.';
       },
     });
   }
