@@ -15,7 +15,7 @@ export class SectiontwoComponent {
   error: string | null = null;
 
   ngOnInit() {
-    fetch('/api/GetPlays')
+    fetch('https://msp-functions.azurewebsites.net/api/GetPlays')
           .then(response => {
             if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
