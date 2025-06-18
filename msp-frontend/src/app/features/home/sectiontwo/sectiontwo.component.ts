@@ -30,7 +30,7 @@ export class SectiontwoComponent {
       .catch(err => {
         console.error('Error fetching plays:', err);
         this.loading = false;
-        this.error = `AAAHHHHH!!! ${err.message} + ${this.url}`;
+        this.error = `AAAHHHHH!!! ${err} + ${err.message} + ${this.url}`;
       });
   }
 }

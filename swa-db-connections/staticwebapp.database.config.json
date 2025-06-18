@@ -21,7 +21,6 @@
       "mode": "production",
       "cors": {
         "origins": [
-          "*",
           "http://localhost:4200",
           "https://mainstreetplayhouse.org/"
         ],
