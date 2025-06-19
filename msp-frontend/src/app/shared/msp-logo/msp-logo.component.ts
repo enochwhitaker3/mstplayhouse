@@ -5,6 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-msp-logo',
   imports: [CommonModule, RouterModule],
+  styleUrl: './msp-logo.component.scss',
   template: `
     <svg
       xmlns="http://www.w3.org/2000/svg"
