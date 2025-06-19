@@ -3,7 +3,7 @@ import { ButtonComponent } from '../../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';
 import { LoaderComponent } from '../../../shared/loader/loader.component';
-import { environment } from '../../../../environments/environment.development';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-sectiontwo',
@@ -18,6 +18,7 @@ export class SectiontwoComponent {
   baseUrl = environment.apiUrl;
 
   ngOnInit() {
+    console.log(`${this.baseUrl}/GetPlays` + `why dude`)
     fetch(`${this.baseUrl}/GetPlays`)
     .then(response => {
       if (!response.ok) {
