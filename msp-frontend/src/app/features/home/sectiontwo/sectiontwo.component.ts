@@ -3,6 +3,8 @@ import { ButtonComponent } from '../../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';
 import { LoaderComponent } from '../../../shared/loader/loader.component';
+import { environment } from '../../../../environments/environment.development';
+
 @Component({
   selector: 'app-sectiontwo',
   imports: [CommonModule, ButtonComponent, LoaderComponent],
@@ -13,9 +15,10 @@ export class SectiontwoComponent {
   plays: Play[] = [];
   loading = true;
   error: string | null = null;
+  baseUrl = environment.apiUrl;
 
   ngOnInit() {
-    fetch('/api/GetPlays')
+    fetch(`${this.baseUrl}/GetPlays`)
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
