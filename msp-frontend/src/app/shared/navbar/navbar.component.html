@@ -54,10 +54,10 @@
   class="avg:hidden"
 >
   <div class="link-container-mobile md:text-[3vmin] sm:text-[4vmin] xs:text-[5vmin] text-[6vmin]">
-    <app-navlink title="Currently Showing" path="currently-showing" />
-    <app-navlink title="Get Tickets" path="get-tickets" />
-    <app-navlink title="Auditions" path="auditions" />
-    <app-navlink title="About Us" path="about-us" />
+    <app-navlink title="Currently Showing" path="currently-showing" (clickedEvent)="toggleMobileMenu()"/>
+    <app-navlink title="Get Tickets" path="get-tickets" (clickedEvent)="toggleMobileMenu()"/>
+    <app-navlink title="Auditions" path="auditions" (clickedEvent)="toggleMobileMenu()"/>
+    <app-navlink title="About Us" path="about-us" (clickedEvent)="toggleMobileMenu()"/>
   </div>
 </div>
 

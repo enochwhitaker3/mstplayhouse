@@ -4,6 +4,7 @@
   [class.active]="isActive"
   (mouseenter)="isHovered = true"
   (mouseleave)="isHovered = false"
+  (click)="clickedEvent.emit()"
 >
   <div class="diamond-wrapper left">
     <app-diamond

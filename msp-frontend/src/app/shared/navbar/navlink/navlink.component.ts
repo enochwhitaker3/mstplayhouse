@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { DiamondComponent } from '../../diamond/diamond.component';
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navlink.component.scss',
 })
 export class NavlinkComponent {
+  @Output() clickedEvent = new EventEmitter<void>();
   @Input() title: string = '';
   @Input() path: string = '';
   isHovered = false;
@@ -19,5 +20,9 @@ export class NavlinkComponent {
 
   get isActive(): boolean {
     return this.router.url.includes(this.path);
+  }
+
+  toggleMenu() {
+    this.clickedEvent.emit();
   }
 }

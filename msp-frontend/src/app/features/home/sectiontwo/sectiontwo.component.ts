@@ -18,7 +18,6 @@ export class SectiontwoComponent {
   baseUrl = environment.apiUrl;
 
   ngOnInit() {
-    console.log(`${this.baseUrl}/GetPlays` + `why dude`)
     fetch(`${this.baseUrl}/GetPlays`)
     .then(response => {
       if (!response.ok) {
