@@ -67,7 +67,8 @@
               "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "buildTarget": "msp-frontend:build:development"
+              "buildTarget": "msp-frontend:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
