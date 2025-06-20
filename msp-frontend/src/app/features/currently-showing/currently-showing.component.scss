@@ -17,16 +17,21 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: row;
-  padding-top: 10rem;
   height: 70vh;
   background-color: $brand-white;
 
   .section-content {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
     max-width: 85vw;
+    height: 100%;
+  }
+
+  .section-content-small{
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
     height: 100%;
   }
 
@@ -36,6 +41,13 @@
     text-align: start;
     z-index: 1;
     margin-right: 5em;
+  }
+
+  .section-text-small {
+    color: $brand-black;
+    font-family: "NewSpiritCondensed";
+    text-align: center;
+    z-index: 1;
   }
   .section-header {
     font-size: 3rem;

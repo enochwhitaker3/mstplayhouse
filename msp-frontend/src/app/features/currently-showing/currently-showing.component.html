@@ -1,10 +1,10 @@
-<div class="section">
-  <div class="section-content">
+<div class="section pb-32 pt-4 sm:pt-14 avg:pt-32 avg:pb-24">
+  <div class="section-content avg:flex hidden">
     <div class="section-text">
-      <h1 class="fadeIn section-header">
+      <h1 class="fadeIn xl:text-5xl lg:text-4xl sm:text-3xl underline">
         <em>Currently Showing</em>
       </h1>
-      <div class="show-details">
+      <div class="show-details xl:text-base lg:text-sm sm:text-xs text-[10px]">
         <h2 class="fadeIn">Benefit Variety Show for Matt Stewart Family</h2>
         <h2 class="fadeIn">Directed by JuDean Parkinson</h2>
         <h2 class="fadeIn">May 9th - May 10th</h2>
@@ -17,7 +17,8 @@
         backgroundColor="#191a18"
       ></app-button>
     </div>
-    <div class="poster-wrapper">
+    
+    <div class="relative w-full xl:max-w-[350px] lg:max-w-[300px] max-w-[250px] aspect-[2/3]">
       <img
         src="https://mainstreetimages.blob.core.windows.net/image/benefit.jpg"
         alt="Poster for play"
@@ -26,6 +27,38 @@
       <img src="assets/Tape.svg" alt="Tape" class="tape-top-left" />
       <img src="assets/Tape.svg" alt="Tape" class="tape-bottom-right" />
     </div>
+  </div>
+  <div class="section-content-small avg:hidden flex flex-col">
+    <div class="section-text-small py-4">
+      <h1 class="fadeIn sm:text-4xl text-3xl underline">
+        <em>Currently Showing</em>
+      </h1>
+    </div>
+
+    <div class="relative w-full sm:max-w-[300px] xs:max-w-[250px] max-w-[200px] aspect-[2/3]">
+      <img
+        src="https://mainstreetimages.blob.core.windows.net/image/benefit.jpg"
+        alt="Poster for play"
+        class="poster"
+      />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-top-left" />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-bottom-right" />
+    </div>
+
+    <div class="section-text-small">
+      <div class="show-details sm:text-xs text-[10px] pt-8">
+        <h2 class="fadeIn">Benefit Variety Show for Matt Stewart Family</h2>
+        <h2 class="fadeIn">Directed by JuDean Parkinson</h2>
+        <h2 class="fadeIn">May 9th - May 10th</h2>
+      </div>
+    </div>
+
+    <app-button
+      text="Get tickets"
+      route="/"
+      color="#ece6d8"
+      backgroundColor="#191a18"
+    ></app-button>
   </div>
 </div>
 <div class="footer">
