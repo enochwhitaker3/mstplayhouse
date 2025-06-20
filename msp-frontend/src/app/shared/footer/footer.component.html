@@ -1,0 +1,30 @@
+@if(lightStyle) {
+  <img src="assets/ripped.svg" alt="Ripped Paper" class="ripped" />
+} @else {
+  <img src="assets/ripped-dark.svg" alt="Ripped Paper" class="ripped" />
+}
+<div class="section 2xl:mt-[-10em] xl:mt-[-8em] lg:mt-[-6em] vg:mt-[-4em] avg:pb-[5em] avg:h-[15vh] xs:h-[10vh] xs:pb-[5em] h-[7.5vh] pb-[2em]">
+  <div class="section-content">
+    <div class="nav-wrapper">
+    @if(lightStyle) {
+      <app-msp-logo-dark class="logo" />
+      <div class="section-text-light">
+        <h2 class="fadeIn xs:text-2xl text-base">Main Street Playhouse</h2>
+        <h2 class="fadeIn xs:text-2xl text-base">Tremonton, Utah</h2>
+        <h2 class="fadeIn xs:text-2xl text-base">© 2014 - 2025</h2>
+      </div>
+    } @else{
+      <app-msp-logo class="logo" />
+      <div class="section-text-dark">
+        <h2 class="fadeIn xs:text-2xl text-base">Main Street Playhouse</h2>
+        <h2 class="fadeIn xs:text-2xl text-base">Tremonton, Utah</h2>
+        <h2 class="fadeIn xs:text-2xl text-base">© 2014 - 2025</h2>
+      </div>
+    }
+      <div class="social-wrapper">
+        <app-insta-logo [lightStyle]=lightStyle class="xs:w-[35px] xs:h-[35px] w-6 h-6" />
+        <app-face-logo [lightStyle]=lightStyle class="xs:w-[35px] xs:h-[35px] w-6 h-6" />
+      </div>
+    </div>
+  </div>
+</div>

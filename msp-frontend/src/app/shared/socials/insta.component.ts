@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-insta-logo',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    fill="#191a18"
+    [attr.fill]="lightStyle ? '#191a18' : '#ECE6D8'"
     viewBox="0 0 24 24"
   >
     <path
@@ -22,4 +22,6 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class InstaLogoComponent {}
+export class InstaLogoComponent {
+    @Input() lightStyle: boolean = true;
+}
