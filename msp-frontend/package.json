@@ -9,6 +9,10 @@
     "test": "ng test"
   },
   "private": true,
+  "engines": {
+    "node": ">=20.16.0",
+    "npm": ">=9.6.7"
+  },
   "dependencies": {
     "@angular/cdk": "^20.0.3",
     "@angular/common": "^20.0.4",
