@@ -1,0 +1,21 @@
+<div class="relative w-full 2xl:max-w-[250px] lg:max-w-[225px] max-w-[200px] aspect-[2/3]">
+    <img src="{{ play.poster }}" alt="Poster for play" class="poster" />
+    <img
+        src="assets/Tape.svg"
+        alt="Tape"
+        [ngClass]="
+        play.id % 2 === 0
+            ? 'tape-top-left avg:w-20 xs:w-16 w-12 -translate-x-[30%] -translate-y-[30%]'
+            : 'tape-top-right avg:w-20 xs:w-16 w-12 translate-x-[30%] -translate-y-[30%] scale-x-[-1]'
+        "
+    />
+    <img
+        src="assets/Tape.svg"
+        alt="Tape"
+        [ngClass]="
+        play.id % 2 === 0
+            ? 'tape-bottom-right avg:w-20 xs:w-16 w-12 translate-x-[30%] xs:translate-y-[30%] translate-y-[-90%]'
+            : 'tape-bottom-left avg:w-20 xs:w-16 w-12 -translate-x-[30%] xs:translate-y-[30%] translate-y-[-90%] scale-x-[-1]'
+        "
+    />
+</div>

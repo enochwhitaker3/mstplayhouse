@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';
 import { LoaderComponent } from '../../../shared/loader/loader.component';
 import { environment } from '../../../../environments/environment';
+import { PosterTapeComponent } from '../../../shared/poster-tape/poster-tape.component';
 
 @Component({
   selector: 'app-sectiontwo',
-  imports: [CommonModule, ButtonComponent, LoaderComponent],
+  imports: [CommonModule, ButtonComponent, LoaderComponent, PosterTapeComponent],
   templateUrl: './sectiontwo.component.html',
   styleUrl: './sectiontwo.component.scss',
 })
