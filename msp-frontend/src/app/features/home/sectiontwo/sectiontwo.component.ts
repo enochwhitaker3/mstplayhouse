@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { Play } from '../../../interfaces/play';

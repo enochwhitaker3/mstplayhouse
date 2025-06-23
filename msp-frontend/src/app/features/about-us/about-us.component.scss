@@ -1,0 +1,80 @@
+@use "../../../colors.scss" as *;
+
+.hero {
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+  }
+}
+
+.shows {
+  color: $brand-black;
+  width: 100%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: 1.5s fade;
+}
+
+.ripped {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -5em;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-bottom: 5em;
+  height: 50vh;
+
+  .section-content {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 75vw;
+    height: 100%;
+  }
+
+  .section-text {
+    color: $brand-black;
+    font-family: "NewSpiritCondensed";
+    text-align: start;
+    z-index: 1;
+  }
+
+}
+
+.footer  {
+  background-color: $brand-black;
+}
