@@ -7,3 +7,12 @@
 img{
   border-radius: 1rem;
 }
+
+button {
+  cursor: pointer;
+  font-family: "NewSpiritCondensed", sans-serif;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: $brand-black;
+  color: $brand-white !important;
+}

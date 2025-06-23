@@ -9,5 +9,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   styleUrl: './about-us.component.scss'
 })
 export class AboutUsComponent {
-
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 }
