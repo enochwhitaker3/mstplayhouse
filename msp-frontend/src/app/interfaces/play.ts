@@ -1,9 +1,11 @@
+import { Showtime } from "./showtimes";
+
 export interface Play {
   id: number;
-  sponsor_name: string | null;
   title: string;
-  start_date: Date;
-  end_date: Date;
+  sponsor_name: string | null;
   poster: string;
   director: string;
+  dates_showing: string;
+  showtimes: Showtime[];
 }
