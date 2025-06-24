@@ -1,0 +1,22 @@
+{
+  "platform": {
+    "apiRuntime": "node:20.16.0"
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/currently-showing"
+    },
+    {
+      "route": "/get-tickets"
+    },
+    {
+      "route": "/auditions"
+    },
+    {
+      "route": "/about-us"
+    }
+  ]
+}
