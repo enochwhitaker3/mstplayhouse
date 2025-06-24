@@ -40,7 +40,8 @@
   <div class="section-content-small avg:hidden flex flex-col">
     <div class="section-text-small py-4">
       <h1 class="fadeIn sm:text-4xl text-3xl underline">
-        <em>Currently Showing</em>
+        <em *ngIf="!playId">Currently Showing</em>
+        <em *ngIf="playId">Show Coming Soon</em>
       </h1>
     </div>
 
