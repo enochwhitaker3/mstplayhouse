@@ -2,7 +2,8 @@
   <div class="section-content avg:flex hidden">
     <div class="section-text">
       <h1 class="fadeIn xl:text-5xl lg:text-4xl sm:text-3xl underline">
-        <em>Currently Showing</em>
+        <em *ngIf="!playId">Currently Showing</em>
+        <em *ngIf="playId">Show Coming Soon</em>
       </h1>
       <ng-container *ngIf="loading">
         <div class="loader-placeholder h-[150px]">
