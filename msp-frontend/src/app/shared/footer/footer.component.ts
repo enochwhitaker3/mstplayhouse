@@ -12,4 +12,5 @@ import { FaceLogoComponent } from "../socials/face.component";
 })
 export class FooterComponent {
   @Input() lightStyle: boolean = true;
+  currentYear = new Date().getFullYear();
 }
