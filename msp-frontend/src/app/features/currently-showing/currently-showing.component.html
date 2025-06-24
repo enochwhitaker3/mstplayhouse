@@ -4,10 +4,15 @@
       <h1 class="fadeIn xl:text-5xl lg:text-4xl sm:text-3xl underline">
         <em>Currently Showing</em>
       </h1>
-      <div class="show-details xl:text-base lg:text-sm sm:text-xs text-[10px]">
-        <h2 class="fadeIn">Benefit Variety Show for Matt Stewart Family</h2>
-        <h2 class="fadeIn">Directed by JuDean Parkinson</h2>
-        <h2 class="fadeIn">May 9th - May 10th</h2>
+      <ng-container *ngIf="loading">
+        <div class="loader-placeholder h-[150px]">
+          <app-loader-dark></app-loader-dark>
+        </div>
+      </ng-container>
+      <div *ngIf="!loading" class="show-details xl:text-base lg:text-sm sm:text-xs text-[10px]">
+        <h2 class="fadeIn">{{currentPlay.title}}</h2>
+        <h2 class="fadeIn">{{currentPlay.director}}</h2>
+        <h2 class="fadeIn">{{currentPlay.dates_showing}}</h2>
       </div>
 
       <app-button
@@ -18,9 +23,11 @@
       ></app-button>
     </div>
     
-    <div class="relative w-full xl:max-w-[350px] lg:max-w-[300px] max-w-[250px] aspect-[2/3]">
+    <div class="relative w-full xl:max-w-[350px] lg:max-w-[300px] max-w-[250px] aspect-[2/3]">  
+      <div *ngIf="loading" class="poster-loader xl:w-[350px] lg:w-[300px] w-[250px] aspect-[2/3]"></div>
       <img
-        src="https://mainstreetimages.blob.core.windows.net/image/benefit.jpg"
+        *ngIf="!loading"
+        src={{currentPlay.poster}}
         alt="Poster for play"
         class="poster"
       />
@@ -36,8 +43,10 @@
     </div>
 
     <div class="relative w-full sm:max-w-[300px] xs:max-w-[250px] max-w-[200px] aspect-[2/3]">
+      <div *ngIf="loading" class="poster-loader sm:w-[300px] xs:w-[250px] w-[200px] aspect-[2/3]"></div>
       <img
-        src="https://mainstreetimages.blob.core.windows.net/image/benefit.jpg"
+        *ngIf="!loading"
+        src={{currentPlay.poster}}
         alt="Poster for play"
         class="poster"
       />
@@ -46,10 +55,15 @@
     </div>
 
     <div class="section-text-small">
-      <div class="show-details sm:text-xs text-[10px] pt-8">
-        <h2 class="fadeIn">Benefit Variety Show for Matt Stewart Family</h2>
-        <h2 class="fadeIn">Directed by JuDean Parkinson</h2>
-        <h2 class="fadeIn">May 9th - May 10th</h2>
+      <ng-container *ngIf="loading">
+        <div class="loader-placeholder h-[75px] pt-8">
+          <app-loader-dark></app-loader-dark>
+        </div>
+      </ng-container>
+      <div *ngIf="!loading" class="show-details sm:text-xs text-[10px] pt-8">
+        <h2 class="fadeIn">{{currentPlay.title}}</h2>
+        <h2 class="fadeIn">{{currentPlay.director}}</h2>
+        <h2 class="fadeIn">{{currentPlay.dates_showing}}</h2>
       </div>
     </div>
 

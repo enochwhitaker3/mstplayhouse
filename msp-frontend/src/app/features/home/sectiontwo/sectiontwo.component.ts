@@ -14,6 +14,7 @@ import { PosterTapeComponent } from '../../../shared/poster-tape/poster-tape.com
 })
 export class SectiontwoComponent {
   plays: Play[] = [];
+  currentPlay: Play | null = null;
   loading = true;
   error: string | null = null;
   baseUrl = environment.apiUrl;
