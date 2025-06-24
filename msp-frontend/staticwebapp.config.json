@@ -1,5 +1,12 @@
 {
   "platform": {
     "apiRuntime": "node:20.16.0"
-  }
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ]
 }
