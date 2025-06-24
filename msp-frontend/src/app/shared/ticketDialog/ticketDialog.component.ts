@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
+import { Component, Inject, Input } from '@angular/core';
+import { MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { Play } from '../../interfaces/play';
 
 @Component({
   selector: 'app-ticketDialog-content',
@@ -9,4 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule],
   standalone: true,
 })
-export class TicketDiaglogComponent {}
+export class TicketDiaglogComponent {
+  play: Play;
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Play) {
+    this.play = data;
+   }
+}

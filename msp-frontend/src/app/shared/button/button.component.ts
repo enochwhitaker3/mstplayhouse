@@ -4,6 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { TicketDiaglogComponent } from '../ticketDialog/ticketDialog.component';
 import { MatButtonModule } from '@angular/material/button';
+import { Play } from '../../interfaces/play';
 
 @Component({
   selector: 'app-button',
@@ -18,6 +19,7 @@ export class ButtonComponent {
   @Input() color: string = '#ece6d8';
   @Input() backgroundColor: string = '#191a18';
   @Input() isDialogButton: boolean = false;
+  @Input() play: Play | null = null;
 
   constructor(private dialog: MatDialog, private router: Router) {
     this.router = router;
@@ -28,9 +30,10 @@ export class ButtonComponent {
   }
 
   openDialog() {
-    console.log('Button clicked, opening dialog:', this.isDialogButton);
     if(this.isDialogButton) {
-      this.dialog.open(TicketDiaglogComponent);
+      this.dialog.open(TicketDiaglogComponent, {
+        data: this.play
+      });
     }
   }
 }

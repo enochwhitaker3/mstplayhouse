@@ -8,6 +8,7 @@ import { AuditionsComponent } from './features/auditions/auditions.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'currently-showing', component: CurrentlyShowingComponent },
+  { path: 'currently-showing/:id', component: CurrentlyShowingComponent },
   { path: 'get-tickets', component: GetTicketsComponent },
   { path: 'auditions', component: AuditionsComponent },
   { path: 'about-us', component: AboutUsComponent },

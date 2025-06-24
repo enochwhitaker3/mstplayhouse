@@ -8,10 +8,10 @@
   {{ text }}
 </button>
 <button
+*ngIf="isDialogButton && play"
   matButton 
   class="msp-button avg:p-3 avg:text-lg p-1 text-base"
   (click)="openDialog()"
-  *ngIf="isDialogButton"
   [ngStyle]="{ 'background-color': backgroundColor, 'color': color }"
 >
   {{ text }}

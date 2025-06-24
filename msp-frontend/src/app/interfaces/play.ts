@@ -8,4 +8,5 @@ export interface Play {
   director: string;
   dates_showing: string;
   showtimes: Showtime[];
+  price: string;
 }

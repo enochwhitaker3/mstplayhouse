@@ -1,5 +1,5 @@
 <div class="container flex flex-col justify-center items-center">
-    <h2 mat-dialog-title>Purchase Tickets</h2>
+    <h2 class="text-center" mat-dialog-title>Purchase Tickets <br> <em>"{{play.title}}"</em></h2>
     <mat-dialog-content>
         <div class="sm:px-16 px-4 flex flex-col items-center justify-center text-center">
             <a
@@ -9,7 +9,7 @@
             >
                 <img class="image w-full max-w-[250px]" src="assets/venmo.svg">
             </a>
-            <p class="mb-0">Each ticket is 10$<br>Include the name and date of the show</p>
+            <p class="mb-0">Each ticket is {{play.price}}<br>Include the name and date of the show</p>
         </div>
     </mat-dialog-content>
     <mat-dialog-actions>
