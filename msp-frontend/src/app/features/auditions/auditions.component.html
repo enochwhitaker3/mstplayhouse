@@ -1,8 +1,68 @@
 <div class="section pb-32 pt-4 sm:pt-14 avg:pt-32 avg:pb-24">
-    <div class="flex justify-center items-center mt-20 ">
-      <h1 class="fadeIn xl:text-5xl lg:text-4xl sm:text-3xl sm:text-4xl text-3xl underline">
-        <em>Coming Soon...</em>
+  <div class="section-content avg:flex hidden">
+    <div class="section-text">
+      <h1 class="fadeIn xl:text-5xl lg:text-4xl sm:text-3xl underline">
+        <ng-container *ngIf="!loading">
+          <em>Auditions for <br>{{currentPlay.title}}</em>
+        </ng-container>
+        <ng-container *ngIf="loading">
+          <em>Loading...</em>
+        </ng-container>
       </h1>
+      <div class="show-details xl:text-base lg:text-sm sm:text-xs text-[10px]">
+        <h2 class="fadeIn"><em>Instructions:</em></h2>
+        <h2 class="fadeIn">&#8226; Download the form below by clicking the button</h2>
+        <h2 class="fadeIn">&#8226; Fill out the registration form</h2>
+        <h2 class="fadeIn">&#8226; Bring the form with you to Auditions on the dates <br>&nbsp;&nbsp;&nbsp;listed!</h2>
+      </div>
+      <app-download-button></app-download-button>
+    </div>
+    
+    <div class="relative w-full xl:max-w-[350px] lg:max-w-[300px] max-w-[250px] aspect-[2/3]">  
+      <div *ngIf="loading" class="poster-loader xl:w-[350px] lg:w-[300px] w-[250px] aspect-[2/3]"></div>
+      <img
+        *ngIf="!loading"
+        src={{currentPlay.poster}}
+        alt="Poster for play"
+        class="poster"
+      />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-top-left" />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-bottom-right" />
+    </div>
+  </div>
+  <div class="section-content-small avg:hidden flex flex-col">
+    <div class="section-text-small py-4">
+      <h1 class="fadeIn sm:text-4xl text-3xl underline">
+        <ng-container *ngIf="!loading">
+          <em>Auditions for <br>{{currentPlay.title}}</em>
+        </ng-container>
+        <ng-container *ngIf="loading">
+          <em>Loading...</em>
+        </ng-container>
+      </h1>
+    </div>
+
+    <div class="relative w-full sm:max-w-[300px] xs:max-w-[250px] max-w-[200px] aspect-[2/3]">
+      <div *ngIf="loading" class="poster-loader sm:w-[300px] xs:w-[250px] w-[200px] aspect-[2/3]"></div>
+      <img
+        *ngIf="!loading"
+        src={{currentPlay.poster}}
+        alt="Poster for play"
+        class="poster"
+      />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-top-left" />
+      <img src="assets/Tape.svg" alt="Tape" class="tape-bottom-right" />
+    </div>
+
+    <div class="section-text-small">
+      <div class="play-title my-6">
+        <h3 class="fadeIn"><em>Instructions:</em></h3>
+        <h4 class="fadeIn my-0">&#8226; Download the form below by clicking the button</h4>
+        <h4 class="fadeIn my-0">&#8226; Fill out the registration form</h4>
+        <h4 class="fadeIn my-0">&#8226; Bring the form with you to Auditions on the dates <br>&nbsp;&nbsp;&nbsp;listed!</h4>
+      </div>
+    </div>
+    <app-download-button></app-download-button>
   </div>
 </div>
 <div class="footer">

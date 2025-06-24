@@ -1,0 +1,10 @@
+@use "../../../colors.scss" as *;
+
+.msp-button {
+  cursor: pointer;
+  font-family: "NewSpiritCondensed", sans-serif;
+  border-radius: 0.5rem;
+  border: none;
+  color: $brand-white !important;
+  background-color: $brand-black;
+}

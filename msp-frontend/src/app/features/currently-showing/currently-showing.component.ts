@@ -22,6 +22,7 @@ export class CurrentlyShowingComponent {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     fetch(`${this.baseUrl}/GetPlays`)
     .then(response => {
       if (!response.ok) {
