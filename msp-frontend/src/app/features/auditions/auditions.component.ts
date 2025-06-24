@@ -3,12 +3,11 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { environment } from '../../../environments/environment';
 import { Play } from '../../interfaces/play';
 import { CommonModule } from '@angular/common';
-import { LoaderDarkComponent } from '../../shared/loader-dark/loader-dark.component';
 import { DownloadButtonComponent } from '../../shared/download-button/download-button.component';
 
 @Component({
   selector: 'app-auditions',
-  imports: [CommonModule, DownloadButtonComponent, LoaderDarkComponent, FooterComponent],
+  imports: [CommonModule, DownloadButtonComponent, FooterComponent],
   templateUrl: './auditions.component.html',
   styleUrl: './auditions.component.scss'
 })
